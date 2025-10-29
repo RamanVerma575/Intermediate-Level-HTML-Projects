@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog Website</title>
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f9fafb;
+      color: #111827;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f3f4f6;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* ===== PRODUCT SECTION ===== */
+    .products {
+      max-width: 1100px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .products h3 {
+      font-size: 28px;
+      color: #2563eb;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h4 {
+      font-size: 18px;
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .product-info p {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e3a8a;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .products h3 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>ShopSmart</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h2>Welcome to ShopSmart</h2>
+    <p>Your one-stop destination for quality products at the best prices.</p>
+  </section>
+
+  <!-- ===== PRODUCTS ===== -->
+  <section class="products" id="products">
+    <h3>Our Featured Products</h3>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1512499617640-c2f999098c63?auto=format&fit=crop&w=800&q=80" alt="Shoes">
+        <div class="product-info">
+          <h4>Running Shoes</h4>
+          <p>Comfortable and stylish sports shoes for everyday use.</p>
+          <p class="price">₹1,499</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=800&q=80" alt="Watch">
+        <div class="product-info">
+          <h4>Smart Watch</h4>
+          <p>Track fitness, calls, and notifications on your wrist.</p>
+          <p class="price">₹2,999</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1592878849122-6692b23a0a9b?auto=format&fit=crop&w=800&q=80" alt="Headphones">
+        <div class="product-info">
+          <h4>Wireless Headphones</h4>
+          <p>Experience crystal-clear sound with noise cancellation.</p>
+          <p class="price">₹3,499</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?auto=format&fit=crop&w=800&q=80" alt="Bag">
+        <div class="product-info">
+          <h4>Travel Backpack</h4>
+          <p>Durable, lightweight backpack for all your adventures.</p>
+          <p class="price">₹1,899</p>
+          <a href="#" class="btn">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 ShopSmart | Designed by Raman Verma
+  </footer>
+
+</body>
+</html>
