@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio with Contact Form</title>
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #f9fafb;
+      color: #111827;
+    }
+
+    header {
+      background-color: #1f2937;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #f3f4f6;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .hero .btn {
+      background: white;
+      color: #2563eb;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero .btn:hover {
+      background: #f3f4f6;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      max-width: 900px;
+      margin: 80px auto;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #2563eb;
+    }
+
+    .about p {
+      font-size: 16px;
+      color: #4b5563;
+      line-height: 1.8;
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects {
+      max-width: 1000px;
+      margin: 80px auto;
+      text-align: center;
+    }
+
+    .projects h3 {
+      font-size: 28px;
+      color: #2563eb;
+      margin-bottom: 30px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-card h4 {
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    .contact {
+      background: #1f2937;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .contact h3 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #3b82f6;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #111827;
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .about h3, .projects h3, .contact h3 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Raman Verma</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h2>Hi, I'm Raman 👋</h2>
+    <p>A passionate Web Developer creating responsive and beautiful websites using HTML, CSS, and JavaScript.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <h3>About Me</h3>
+    <p>
+      I'm an enthusiastic Front-End Developer specializing in modern UI design.  
+      I enjoy building creative, fast, and user-friendly websites.  
+      My goal is to craft seamless web experiences that inspire users.
+    </p>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects" id="projects">
+    <h3>My Projects</h3>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1581276879432-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Portfolio Project">
+        <h4>Portfolio Website</h4>
+        <p>Personal portfolio showcasing my work, skills, and contact info.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Blog Project">
+        <h4>Simple Blog</h4>
+        <p>A responsive blog page using HTML and CSS grid layouts.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=800&q=80" alt="Ecommerce Project">
+        <h4>Online Store</h4>
+        <p>Static HTML/CSS design for an e-commerce homepage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="contact" id="contact">
+    <h3>Contact Me</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Raman Verma | Portfolio Website
+  </footer>
+
+</body>
+</html>
